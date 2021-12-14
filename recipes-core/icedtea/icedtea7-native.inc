@@ -26,7 +26,7 @@ CXXFLAGS:append = " -fno-tree-dse"
 CXX:append = " -std=gnu++98"
 
 # WORKAROUND: ignore errors from new compilers
-CFLAGS:append = " -Wno-error=stringop-overflow -Wno-error=return-type"
+CFLAGS:append = " -Wno-error=stringop-overflow -Wno-error=return-type -Wno-error=format-overflow"
 
 # oe.utils.get_host_compiler_version returns "gcc, 9.2" and we want -> "9"
 HOST_COMPILER_MAJOR="${@oe.utils.get_host_compiler_version(d)[1].split(".", 2)[0]}"

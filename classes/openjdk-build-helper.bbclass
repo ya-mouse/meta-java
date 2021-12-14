@@ -82,6 +82,8 @@ def openjdk_build_helper_get_llvm_configure_arch(d):
         arch = "powerpc"
     elif arch == "arm":
         arch = "arm"
+    elif arch == "aarch64":
+        arch = "aarch64"
     else:
         if 'shark' in d.getVar('PACKAGECONFIG').split():
             bb.warn("%s does not support %s in Shark builds yet" % (d.getVar('PN'), arch) );
